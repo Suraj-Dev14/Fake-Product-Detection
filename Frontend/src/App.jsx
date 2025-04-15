@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./component/Layout";
-import Home from "./component/Home";
+import Home from "./component/Pages/Home";
 import Login from "./component/Login";
 import ProtectedRoute from "./component/ProtectedRoute";
-import LandingPage from "./component/LandingPage";
+import LandingPage from "./component/LandingPage/LandingPage";
 
 function App() {
   return (

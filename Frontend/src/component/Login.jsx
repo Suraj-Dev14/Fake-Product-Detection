@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { LuShield } from "react-icons/lu";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 function Login() {
   const [signin, setSignin] = useState(true);
@@ -27,16 +29,16 @@ function Login() {
         <button
           onClick={handleBackButton}
           className="absolute left-10 top-10 flex items-center py-2 px-4 cursor-pointer hover:bg-gray-100
-        rounded-lg text-sm font-semibold"
+        rounded-lg text-sm font-semibold gap-2"
         >
-          <img className="mr-2 mt-0.5 h-3 w-3" src="./LeftArrow.png" />
+          <FaArrowLeftLong className="h-4 w-4" />
           Back
         </button>
 
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 gap-2 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <div className="flex justify-center">
-              <img className="w-[50px]" src="/Shield.png" />
+              <LuShield className="w-8 h-8" />
             </div>
             <h1 className="text-3xl font-bold tracking-tight">Company Login</h1>
             <p className="px-5 text-[#c] text-sm text-muted-foreground">
