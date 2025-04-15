@@ -1,8 +1,17 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const [signin, setSignin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleBackButton = () => {
+    navigate("/");
+  };
+
+  const togglePage = () => (signin ? setSignin(false) : setSignin(true));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +25,7 @@ function Login() {
     <>
       <div className="flex h-screen w-[100%] flex-col items-center justify-center">
         <button
-          href="/"
+          onClick={handleBackButton}
           className="absolute left-10 top-10 flex items-center py-2 px-4 cursor-pointer hover:bg-gray-100
         rounded-lg text-sm font-semibold"
         >
@@ -38,7 +47,7 @@ function Login() {
           <div className="border-2 rounded-2xl border-gray-200 py-8 px-6">
             <div className="flex flex-col gap-2">
               <div className="text-xl font-semibold tracking-tight">
-                Sign In
+                {signin ? "Sign In" : "Sign Up"}
               </div>
               <div className="pr-4 text-[#6e6e6e] text-sm text-muted-foreground">
                 Access your company portal to manage products
@@ -63,12 +72,14 @@ function Login() {
                     <label className="text-sm font-bold" htmlFor="password">
                       Password
                     </label>
-                    <button
-                      href="#"
-                      className="text-xs text-primary hover:underline cursor-pointer"
-                    >
-                      Forgot password?
-                    </button>
+                    {signin && (
+                      <button
+                        href="#"
+                        className="text-xs text-primary hover:underline cursor-pointer"
+                      >
+                        Forgot password?
+                      </button>
+                    )}
                   </div>
                   <input
                     className="border-1 w-[100%] p-2 rounded-[4px] border-gray-300"
@@ -81,24 +92,28 @@ function Login() {
               <div>
                 <button
                   type="submit"
-                  className={`w-full ${isLoading ? "bg-gray-700":"bg-black"} text-white rounded-[7px] p-2 mt-4 cursor-pointer`}
+                  className={`w-full ${
+                    isLoading ? "bg-gray-700" : "bg-black"
+                  } text-white rounded-[7px] p-2 mt-4 cursor-pointer`}
                   disabled={isLoading}
                 >
-                  {isLoading ? "Signing in..." : "Sign In"}
+                  {isLoading ? "Loading..." : signin ? "Sign In" : "Sign Up"}
                 </button>
               </div>
             </form>
           </div>
 
           <p className="px-8 text-center text-[#6e6e6e] text-[14px] text-muted-foreground">
-            Don't have an account?{" "}
+            {signin ? "Don't" : "Already"} have an account?{" "}
             <button
-              href="#"
+              onClick={togglePage}
               className="underline underline-offset-4 hover:text-primary cursor-pointer"
             >
-              Contact us
+              {signin ? "Sign Up" : "Sign In"}
             </button>{" "}
-            to register your company.
+            {signin
+              ? "to register your company."
+              : "to monitor your company dashboard."}
           </p>
         </div>
       </div>
