@@ -1,0 +1,81 @@
+# =========================
+# Python Virtual Environment
+# =========================
+venv/
+ENV/
+env/
+.venv/
+
+# =========================
+# Python Cache & Bytecode
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# =========================
+# Environment Variables
+# =========================
+.env
+.env.*
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+log/
+
+# =========================
+# Database Files
+# =========================
+*.sqlite3
+*.db
+
+# =========================
+# FastAPI / Uvicorn
+# =========================
+*.pid
+*.sock
+
+# =========================
+# QR Code Generated Files
+# =========================
+qr_codes/
+generated_qr/
+*.png
+*.jpg
+
+# =========================
+# Test & Coverage Reports
+# =========================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================
+# IDE & Editor Settings
+# =========================
+.vscode/
+.idea/
+*.iml
+
+# =========================
+# OS Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Build & Distribution
+# =========================
+build/
+dist/
+*.egg-info/
+
+# =========================
+# Secrets & Certificates
+# =========================
+*.pem
+*.key
