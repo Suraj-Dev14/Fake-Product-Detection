@@ -20,9 +20,13 @@ export function LoginPage() {
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center gap-2 mb-4">
             <Shield className="w-10 h-10 text-blue-600" />
-            <span className="text-3xl font-bold text-gray-900">VerifyGuard</span>
+            <span className="text-3xl font-bold text-gray-900">
+              VerifyGuard
+            </span>
           </Link>
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">Welcome Back</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">
+            Welcome Back
+          </h1>
           <p className="text-gray-600">Sign in to your account to continue</p>
         </div>
 
@@ -31,7 +35,10 @@ export function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email Address
               </label>
               <div className="relative">
@@ -52,7 +59,10 @@ export function LoginPage() {
 
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Password
               </label>
               <div className="relative">
@@ -90,7 +100,10 @@ export function LoginPage() {
                   type="checkbox"
                   className="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                 />
-                <label htmlFor="remember" className="ml-2 block text-sm text-gray-700">
+                <label
+                  htmlFor="remember"
+                  className="ml-2 block text-sm text-gray-700"
+                >
                   Remember me
                 </label>
               </div>
@@ -114,7 +127,9 @@ export function LoginPage() {
               <div className="w-full border-t border-gray-300"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-white text-gray-500">Or continue with</span>
+              <span className="px-2 bg-white text-gray-500">
+                Or continue with
+              </span>
             </div>
           </div>
 
@@ -152,7 +167,10 @@ export function LoginPage() {
           {/* Sign Up Link */}
           <p className="mt-6 text-center text-sm text-gray-600">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-blue-600 hover:text-blue-700 font-medium">
+            <Link
+              to="/signup"
+              className="text-blue-600 hover:text-blue-700 font-medium"
+            >
               Sign up for free
             </Link>
           </p>

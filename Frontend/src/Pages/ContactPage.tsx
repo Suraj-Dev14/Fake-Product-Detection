@@ -8,15 +8,19 @@ export function ContactPage() {
     company: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -25,7 +29,7 @@ export function ContactPage() {
     // Handle form submission
     console.log("Form submitted:", formData);
     setIsSubmitted(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
@@ -35,21 +39,22 @@ export function ContactPage() {
         company: "",
         phone: "",
         subject: "",
-        message: ""
+        message: "",
       });
     }, 3000);
   };
 
   return (
     <div className="min-h-screen bg-white">
-
-
       {/* Hero Section */}
       <section className="bg-linear-to-br from-blue-50 to-purple-50 py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">Get in Touch</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-4">
+            Get in Touch
+          </h1>
           <p className="text-xl text-gray-600">
-            Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+            Have questions? We'd love to hear from you. Send us a message and
+            we'll respond as soon as possible.
           </p>
         </div>
       </section>
@@ -59,10 +64,13 @@ export function ContactPage() {
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Information</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Contact Information
+            </h2>
             <p className="text-gray-700 mb-8">
-              Fill out the form and our team will get back to you within 24 hours. For urgent matters, 
-              please contact us directly via phone or email.
+              Fill out the form and our team will get back to you within 24
+              hours. For urgent matters, please contact us directly via phone or
+              email.
             </p>
 
             <div className="space-y-6">
@@ -84,7 +92,9 @@ export function ContactPage() {
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
                   <p className="text-gray-700">+1 (555) 123-4567</p>
-                  <p className="text-sm text-gray-600">Monday to Friday, 9am to 6pm EST</p>
+                  <p className="text-sm text-gray-600">
+                    Monday to Friday, 9am to 6pm EST
+                  </p>
                 </div>
               </div>
 
@@ -103,24 +113,29 @@ export function ContactPage() {
 
             {/* Additional Support Options */}
             <div className="mt-12 p-6 bg-linear-to-br from-blue-50 to-purple-50 rounded-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Other Ways to Reach Us</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Other Ways to Reach Us
+              </h3>
               <ul className="space-y-3">
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">
-                    <strong>Live Chat:</strong> Available on our website during business hours
+                    <strong>Live Chat:</strong> Available on our website during
+                    business hours
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">
-                    <strong>Help Center:</strong> Browse our knowledge base for instant answers
+                    <strong>Help Center:</strong> Browse our knowledge base for
+                    instant answers
                   </span>
                 </li>
                 <li className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                   <span className="text-gray-700">
-                    <strong>Social Media:</strong> Follow us on Twitter, LinkedIn, and Facebook
+                    <strong>Social Media:</strong> Follow us on Twitter,
+                    LinkedIn, and Facebook
                   </span>
                 </li>
               </ul>
@@ -129,14 +144,18 @@ export function ContactPage() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-lg shadow-xl p-8 border border-gray-200">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Send Us a Message
+            </h2>
 
             {isSubmitted ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Send className="w-8 h-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Message Sent!
+                </h3>
                 <p className="text-gray-700">
                   Thank you for contacting us. We'll get back to you shortly.
                 </p>
@@ -145,7 +164,10 @@ export function ContactPage() {
               <form onSubmit={handleSubmit} className="space-y-5">
                 {/* Name */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Full Name *
                   </label>
                   <input
@@ -162,7 +184,10 @@ export function ContactPage() {
 
                 {/* Email */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email Address *
                   </label>
                   <input
@@ -179,7 +204,10 @@ export function ContactPage() {
 
                 {/* Company */}
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Company Name
                   </label>
                   <input
@@ -195,7 +223,10 @@ export function ContactPage() {
 
                 {/* Phone */}
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Phone Number
                   </label>
                   <input
@@ -211,7 +242,10 @@ export function ContactPage() {
 
                 {/* Subject */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Subject *
                   </label>
                   <select
@@ -234,7 +268,10 @@ export function ContactPage() {
 
                 {/* Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -267,24 +304,33 @@ export function ContactPage() {
       <section className="bg-gray-50 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">We're Here to Help</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              We're Here to Help
+            </h2>
             <p className="text-xl text-gray-600">
-              Our team is committed to providing you with the best support possible
+              Our team is committed to providing you with the best support
+              possible
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">24/7</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Support Available</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Support Available
+              </h3>
               <p className="text-gray-600">
                 Enterprise customers get round-the-clock support
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="text-4xl font-bold text-blue-600 mb-2">&lt;1hr</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Average Response Time</h3>
+              <div className="text-4xl font-bold text-blue-600 mb-2">
+                &lt;1hr
+              </div>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Average Response Time
+              </h3>
               <p className="text-gray-600">
                 We aim to respond to all inquiries within an hour
               </p>
@@ -292,7 +338,9 @@ export function ContactPage() {
 
             <div className="bg-white p-6 rounded-lg shadow-md text-center">
               <div className="text-4xl font-bold text-blue-600 mb-2">98%</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Customer Satisfaction</h3>
+              <h3 className="font-semibold text-gray-900 mb-2">
+                Customer Satisfaction
+              </h3>
               <p className="text-gray-600">
                 Our customers rate us highly for support quality
               </p>
@@ -300,7 +348,6 @@ export function ContactPage() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { FeaturesPage } from "./Pages/FeaturesPage";
 import { PrivacyPage } from "./Pages/PrivacyPage";
 import { TermsPage } from "./Pages/TermsPage";
 import { SecurityPage } from "./Pages/SecurityPage";
+import { NotFoundPage } from "./Pages/NotFoundPage";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
       </Route>
       <Route path="login" element={<LoginPage />} />
       <Route path="signup" element={<SignupPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );
 };

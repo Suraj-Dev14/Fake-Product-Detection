@@ -12,13 +12,13 @@ export function LandingPage() {
               Protect Your Brand from Counterfeit Products
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Advanced QR code technology to verify product authenticity instantly. 
-              Safeguard your customers and your reputation with our cutting-edge 
-              fake product detection system.
+              Advanced QR code technology to verify product authenticity
+              instantly. Safeguard your customers and your reputation with our
+              cutting-edge fake product detection system.
             </p>
             <div className="flex gap-4">
-              <Link 
-                to="/signup" 
+              <Link
+                to="/signup"
                 className="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-lg"
               >
                 Get Started
@@ -55,9 +55,12 @@ export function LandingPage() {
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                 <QrCode className="w-6 h-6 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Scan QR Code</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Scan QR Code
+              </h3>
               <p className="text-gray-600">
-                Simply scan the unique QR code on your product using your smartphone camera.
+                Simply scan the unique QR code on your product using your
+                smartphone camera.
               </p>
             </div>
 
@@ -65,9 +68,12 @@ export function LandingPage() {
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
                 <CheckCircle className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Instant Verification</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Instant Verification
+              </h3>
               <p className="text-gray-600">
-                Our system instantly verifies the product against our secure database.
+                Our system instantly verifies the product against our secure
+                database.
               </p>
             </div>
 
@@ -75,9 +81,12 @@ export function LandingPage() {
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Get Results</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Get Results
+              </h3>
               <p className="text-gray-600">
-                Receive immediate confirmation if the product is authentic or counterfeit.
+                Receive immediate confirmation if the product is authentic or
+                counterfeit.
               </p>
             </div>
           </div>
@@ -96,29 +105,46 @@ export function LandingPage() {
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Blockchain Security</h4>
-                    <p className="text-gray-600">Tamper-proof verification using blockchain technology</p>
+                    <h4 className="font-semibold text-gray-900">
+                      Blockchain Security
+                    </h4>
+                    <p className="text-gray-600">
+                      Tamper-proof verification using blockchain technology
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Real-Time Analytics</h4>
-                    <p className="text-gray-600">Track verification attempts and detect counterfeit patterns</p>
+                    <h4 className="font-semibold text-gray-900">
+                      Real-Time Analytics
+                    </h4>
+                    <p className="text-gray-600">
+                      Track verification attempts and detect counterfeit
+                      patterns
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Easy Integration</h4>
-                    <p className="text-gray-600">Seamlessly integrate with your existing production line</p>
+                    <h4 className="font-semibold text-gray-900">
+                      Easy Integration
+                    </h4>
+                    <p className="text-gray-600">
+                      Seamlessly integrate with your existing production line
+                    </p>
                   </div>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="w-6 h-6 text-green-600 shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Customer Trust</h4>
-                    <p className="text-gray-600">Build confidence and loyalty with verified authenticity</p>
+                    <h4 className="font-semibold text-gray-900">
+                      Customer Trust
+                    </h4>
+                    <p className="text-gray-600">
+                      Build confidence and loyalty with verified authenticity
+                    </p>
                   </div>
                 </li>
               </ul>
@@ -130,17 +156,21 @@ export function LandingPage() {
                   Counterfeit Crisis
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  The global counterfeit market costs businesses over $500 billion annually. 
-                  Protect your brand and customers today.
+                  The global counterfeit market costs businesses over $500
+                  billion annually. Protect your brand and customers today.
                 </p>
                 <div className="grid grid-cols-2 gap-4 mt-8">
                   <div className="bg-white p-4 rounded-lg">
-                    <div className="text-3xl font-bold text-blue-600">99.9%</div>
+                    <div className="text-3xl font-bold text-blue-600">
+                      99.9%
+                    </div>
                     <div className="text-sm text-gray-600">Accuracy Rate</div>
                   </div>
                   <div className="bg-white p-4 rounded-lg">
                     <div className="text-3xl font-bold text-blue-600">10M+</div>
-                    <div className="text-sm text-gray-600">Products Verified</div>
+                    <div className="text-sm text-gray-600">
+                      Products Verified
+                    </div>
                   </div>
                 </div>
               </div>
@@ -158,15 +188,14 @@ export function LandingPage() {
           <p className="text-xl text-blue-100 mb-8">
             Join thousands of brands using VerifyGuard to fight counterfeiting
           </p>
-          <Link 
-            to="/signup" 
+          <Link
+            to="/signup"
             className="inline-block px-8 py-3 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold"
           >
             Start Free Trial
           </Link>
         </div>
       </section>
-
     </div>
   );
 }
